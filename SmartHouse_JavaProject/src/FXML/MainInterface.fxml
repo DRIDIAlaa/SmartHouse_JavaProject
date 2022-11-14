@@ -1,8 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1">
-	<!-- TODO Add Nodes -->
+<AnchorPane prefHeight="578.0" prefWidth="917.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MainInerfaceController">
+   <children>
+      <Pane prefHeight="620.0" prefWidth="200.0" style="-fx-background-color: #363348;">
+         <children>
+            <Label accessibleRole="BUTTON" layoutX="46.0" layoutY="469.0" prefHeight="26.0" prefWidth="93.0" style="-fx-border-color: #FFFFFF;" text="How to use" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="68.0" fitWidth="63.0" layoutX="68.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/HomeIcon.png" />
+               </image>
+            </ImageView>
+            <Line endX="100.0" layoutX="100.0" layoutY="111.0" startX="-100.0" stroke="#c1c1c1" />
+            <Label layoutX="32.0" layoutY="77.0" text="Welcome Home" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutY="118.0" prefHeight="142.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="DashBoardButton" layoutX="26.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#onClickedEvent" prefHeight="26.0" prefWidth="146.0" text="Dashboard" />
+                <Button fx:id="RoomsButton" layoutX="26.0" layoutY="58.0" mnemonicParsing="false" onMouseClicked="#onClickedEvent" prefHeight="26.0" prefWidth="146.0" text="Rooms" />
+                  <Button fx:id="MembersButton" layoutX="26.0" layoutY="100.0" mnemonicParsing="false" onMouseClicked="#onClickedEvent" prefHeight="26.0" prefWidth="146.0" text="Members" />
+               </children>
+            </AnchorPane>
+         </children>
+      </Pane>
+      <AnchorPane layoutX="200.0" prefHeight="620.0" prefWidth="716.0">
+         <children>
+            <StackPane fx:id="contentArea" prefHeight="620.0" prefWidth="716.0" />
+         </children></AnchorPane>
+   </children>
 </AnchorPane>
-
