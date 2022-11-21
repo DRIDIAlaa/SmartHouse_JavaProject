@@ -29,6 +29,9 @@ public class MainInerfaceController {
 		if(((Control)mouseEvent.getSource()).getId().toString().equals("RoomsButton")) {
 			changeContentArea("RoomsInterface");
 		}
+		if(((Control)mouseEvent.getSource()).getId().toString().equals("MembersButton1")) {
+			changeContentArea("Database");
+		}
 	}
 	
 	public void changeContentArea(String interfaceName) throws IOException {

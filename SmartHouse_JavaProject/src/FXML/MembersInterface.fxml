@@ -9,6 +9,8 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
+<?import javafx.scene.control.PasswordField?>
+
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="518.0" prefWidth="789.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MembersInterfaceController">
    <children>
       <AnchorPane prefHeight="43.0" prefWidth="789.0" style="-fx-background-color: #363348;">
@@ -31,6 +33,8 @@
             <TableColumn prefWidth="116.80007934570312" text="Clock out" />
             <TableColumn prefWidth="166.39996337890625" text="Modify/Remove" />
         </columns>
+        <TextField fx:id="textField" layoutX="14.0" layoutY="14.0" prefHeight="46.0" prefWidth="241.0" />
+      <Button layoutX="260.0" layoutY="17.0" mnemonicParsing="false" onAction="#button" prefHeight="35.0" prefWidth="153.0" text="Insert and Show" />
       </TableView>
    </children>
 </Pane>
