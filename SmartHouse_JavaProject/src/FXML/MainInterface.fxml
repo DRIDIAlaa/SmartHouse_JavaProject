@@ -30,14 +30,14 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <AnchorPane layoutY="118.0" prefHeight="142.0" prefWidth="200.0">
+            <AnchorPane layoutY="118.0" prefHeight="192.0" prefWidth="200.0">
                <children>
                   <Button fx:id="DashBoardButton" layoutX="26.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#onClickedEvent" prefHeight="26.0" prefWidth="146.0" text="Dashboard" />
                 <Button fx:id="RoomsButton" layoutX="26.0" layoutY="58.0" mnemonicParsing="false" onMouseClicked="#onClickedEvent" prefHeight="26.0" prefWidth="146.0" text="Rooms" />
                   <Button fx:id="MembersButton" layoutX="26.0" layoutY="100.0" mnemonicParsing="false" onMouseClicked="#onClickedEvent" prefHeight="26.0" prefWidth="146.0" text="Members" />
+                  <Button fx:id="MembersButton1" layoutX="26.0" layoutY="144.0" mnemonicParsing="false" onMouseClicked="#onClickedEvent" prefHeight="26.0" prefWidth="146.0" text="Add To Database" />
                </children>
             </AnchorPane>
-            <Button fx:id="MembersButton1" layoutX="26.0" layoutY="260.0" mnemonicParsing="false" onMouseClicked="#onClickedEvent" prefHeight="26.0" prefWidth="146.0" text="Add To Database" />
          </children>
       </Pane>
       <AnchorPane layoutX="200.0" prefHeight="620.0" prefWidth="716.0">

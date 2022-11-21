@@ -4,7 +4,7 @@ import java.net.URL;
 
 import java.util.ResourceBundle;
 
-import connectivity.ConnectionClass;
+import DAL.ConnectionClass;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;

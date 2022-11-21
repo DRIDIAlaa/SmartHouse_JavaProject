@@ -11,7 +11,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import connectivity.ConnectionClass;
+import DAL.ConnectionClass;
+import DAL.MembersAccess;
 
 public class DatabaseController {
     public TextField textField;
@@ -25,35 +26,9 @@ public class DatabaseController {
         textLabel.setText(textField.getText());
         System.out.println("Program is running");
     }
-
     public void login(ActionEvent actionEvent) throws SQLException {
 
-        ConnectionClass connectionClass=new ConnectionClass();
-        Connection connection=connectionClass.getConnection();
-        
-        String sql="INSERT INTO USER VALUES ('"+textField.getText()+"')";
-        Statement statement= connection.createStatement();
-        statement.executeUpdate(sql) ;
-        
-
-  /*     try {
-            Statement statement=connection.createStatement();
-            String sql="SELECT * FROM userauth WHERE username = '"+userName.getText()+"' AND password = '"+userPassword.getText()+"';";
-            ResultSet resultSet=statement.executeQuery(sql);
-
-            if (resultSet.next()){
-                isConnected.setText("Connected");
-            }else {
-
-                isConnected.setText("Not Connected");
-            }
-
-
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } 
-*/
+    	MembersAccess.addMember(textField.getText());
     }
     
  }
