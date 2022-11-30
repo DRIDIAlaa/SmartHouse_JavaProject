@@ -9,29 +9,27 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<?import javafx.scene.control.PasswordField?>
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="518.0" prefWidth="789.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MembersInterfaceController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="716.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MembersInterfaceController">
    <children>
-      <AnchorPane prefHeight="43.0" prefWidth="789.0" style="-fx-background-color: #363348;">
+      <AnchorPane prefHeight="40.0" prefWidth="716.0" style="-fx-background-color: #363348;">
          <children>
-            <Button layoutX="697.0" layoutY="9.0" mnemonicParsing="false" text="Button" />
-            <TextField layoutX="524.0" layoutY="9.0" />
-            <Label layoutX="39.0" layoutY="4.0" text="Members" textFill="WHITE">
+            <Button layoutX="633.0" layoutY="9.0" mnemonicParsing="false" text="Button" />
+            <TextField layoutX="429.0" layoutY="9.0" />
+            <Label text="Members" textFill="WHITE" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="4.0">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
          </children>
       </AnchorPane>
-      <TableView layoutX="28.0" layoutY="77.0" prefHeight="332.0" prefWidth="736.0">
+      <TableView layoutX="28.0" layoutY="77.0" prefHeight="332.0" prefWidth="670.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="Id" />
-          <TableColumn prefWidth="167.1999740600586" text="Name" />
-            <TableColumn prefWidth="91.20001220703125" text="Room" />
-            <TableColumn prefWidth="121.5999755859375" text="Clock in" />
-            <TableColumn prefWidth="116.80007934570312" text="Clock out" />
-            <TableColumn prefWidth="166.39996337890625" text="Modify/Remove" />
+          <TableColumn prefWidth="47.20001029968262" text="Id" />
+          <TableColumn prefWidth="116.79999542236328" text="Name" />
+            <TableColumn prefWidth="87.20001220703125" text="Room" />
+            <TableColumn prefWidth="143.20001220703125" text="Clock in" />
+            <TableColumn prefWidth="131.19998168945312" text="Clock out" />
+            <TableColumn minWidth="5.0" prefWidth="141.20001220703125" text="Modify/Remove" />
         </columns>
         <TextField fx:id="textField" layoutX="14.0" layoutY="14.0" prefHeight="46.0" prefWidth="241.0" />
       <Button layoutX="260.0" layoutY="17.0" mnemonicParsing="false" onAction="#button" prefHeight="35.0" prefWidth="153.0" text="Insert and Show" />
