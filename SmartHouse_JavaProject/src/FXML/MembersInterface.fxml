@@ -13,8 +13,7 @@
    <children>
       <AnchorPane prefHeight="40.0" prefWidth="716.0" style="-fx-background-color: #363348;">
          <children>
-            <Button layoutX="633.0" layoutY="9.0" mnemonicParsing="false" text="Button" />
-            <TextField layoutX="429.0" layoutY="9.0" />
+            <Button fx:id="AddMemberButton" layoutX="634.0" layoutY="7.0" mnemonicParsing="false" onAction="#addMemberButtonAction" text="Add" />
             <Label text="Members" textFill="WHITE" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="4.0">
                <font>
                   <Font size="24.0" />
