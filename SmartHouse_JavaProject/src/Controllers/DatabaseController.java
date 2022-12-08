@@ -17,8 +17,16 @@ import DAL.MembersAccess;
 public class DatabaseController {
     public TextField textField;
     public Label textLabel;
-    public TextField userName;
+    public TextField name ;
+    public TextField room ;
+    public TextField checkin ;
+    public TextField checkout ;
 
+
+
+ 
+
+    
     public Label isConnected;
     public PasswordField userPassword;
 
@@ -26,9 +34,10 @@ public class DatabaseController {
         textLabel.setText(textField.getText());
         System.out.println("Program is running");
     }
+    
     public void login(ActionEvent actionEvent) throws SQLException {
 
-    	MembersAccess.addMember(textField.getText());
+    	MembersAccess.addMember(name.getText(),room.getText(),checkin.getText(),checkout.getText());
     }
     
  }

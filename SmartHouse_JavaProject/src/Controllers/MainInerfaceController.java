@@ -20,16 +20,29 @@ public class MainInerfaceController {
 			Parent fxml = FXMLLoader.load(getClass().getResource("/FXML/MainInterface.fxml"));
 			contentArea.getChildren().removeAll();
 			contentArea.getChildren().setAll(fxml);
+
 		}
 		
+		if(((Control)mouseEvent.getSource()).getId().toString().equals("DashBoardButton")) {
+			contentArea.getChildren().removeAll();
+
+			changeContentArea("widgets");
+			
+		}
 		if(((Control)mouseEvent.getSource()).getId().toString().equals("MembersButton")) {
+			contentArea.getChildren().removeAll();
+
 			changeContentArea("MembersInterface");
 		}
 		
 		if(((Control)mouseEvent.getSource()).getId().toString().equals("RoomsButton")) {
+			contentArea.getChildren().removeAll();
+
 			changeContentArea("RoomsInterface");
 		}
 		if(((Control)mouseEvent.getSource()).getId().toString().equals("MembersButton1")) {
+			contentArea.getChildren().removeAll();
+
 			changeContentArea("Database");
 		}
 	}

@@ -10,6 +10,15 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
 <AnchorPane prefHeight="578.0" prefWidth="917.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MainInerfaceController">
    <children>
       <Pane prefHeight="620.0" prefWidth="200.0" style="-fx-background-color: #363348;">
@@ -43,6 +52,10 @@
       <AnchorPane layoutX="200.0" prefHeight="620.0" prefWidth="716.0">
          <children>
             <StackPane fx:id="contentArea" prefHeight="620.0" prefWidth="716.0" />
+            
+           
+      
+      
          </children></AnchorPane>
    </children>
 </AnchorPane>

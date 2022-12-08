@@ -1,59 +1,59 @@
-package BOL;
+package BOL ;
 
-import java.util.Date;
+import java.sql.Date;
 
+/**
+ *
+ * @author hocin
+ */
 public class Member {
-	
-	private int id;
-	private String name;
-	private Date chechIn;
-	private Date checkOut;
-	
-	public Member(int id, String name, Date chechIn, Date checkOut) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.chechIn = chechIn;
-		this.checkOut = checkOut;
-	}
+    
+    
+    String name,room,checkin,checkout ;
 
-	public int getId() {
-		return id;
-	}
+    public Member(String name, String room , String checkin, String checkout) {
+        this.name = name;
+        this.room = room;
+        this.checkin = checkin;
+        this.checkout = checkout;
+    }
 
-	public void setId(int id) {
-		this.id = id;
-	}
 
-	public String getName() {
-		return name;
-	}
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public Date getChechIn() {
-		return chechIn;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public void setChechIn(Date chechIn) {
-		this.chechIn = chechIn;
-	}
 
-	public Date getCheckOut() {
-		return checkOut;
-	}
+    public String getRoom() {
+        return room;
+    }
 
-	public void setCheckOut(Date checkOut) {
-		this.checkOut = checkOut;
-	}
+    public void setRoom(String room) {
+        this.room = room;
+    }
 
-	@Override
-	public String toString() {
-		return "Member [id=" + id + ", name=" + name + ", chechIn=" + chechIn + ", checkOut=" + checkOut + "]";
-	}
-	
-	
-	
+    public String getCheckin() {
+        return checkin;
+    }
+
+    public void setCheckin(String checkin) {
+        this.checkin = checkin ;
+    }
+
+    public String getCheckout() {
+        return checkout;
+    }
+
+    public void setCheckout(String checkout) {
+        this.checkout = checkout;
+    }
+
+    
+    
+    
 }

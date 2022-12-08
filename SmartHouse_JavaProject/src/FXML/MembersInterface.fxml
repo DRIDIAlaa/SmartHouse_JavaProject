@@ -1,37 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="716.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MembersInterfaceController">
+<AnchorPane id="AnchorPane" prefHeight="452.0" prefWidth="641.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="Controllers.MembersInterfaceController">
+
    <children>
-      <AnchorPane prefHeight="40.0" prefWidth="716.0" style="-fx-background-color: #363348;">
-         <children>
-            <Button fx:id="AddMemberButton" layoutX="634.0" layoutY="7.0" mnemonicParsing="false" onAction="#addMemberButtonAction" text="Add" />
-            <Label text="Members" textFill="WHITE" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="4.0">
-               <font>
-                  <Font size="24.0" />
-               </font>
-            </Label>
-         </children>
-      </AnchorPane>
-      <TableView layoutX="28.0" layoutY="77.0" prefHeight="332.0" prefWidth="670.0">
+      <TableView fx:id="MembersTable" layoutX="34.0" layoutY="157.0" prefHeight="265.0" prefWidth="574.0">
         <columns>
-          <TableColumn prefWidth="47.20001029968262" text="Id" />
-          <TableColumn prefWidth="116.79999542236328" text="Name" />
-            <TableColumn prefWidth="87.20001220703125" text="Room" />
-            <TableColumn prefWidth="143.20001220703125" text="Clock in" />
-            <TableColumn prefWidth="131.19998168945312" text="Clock out" />
-            <TableColumn minWidth="5.0" prefWidth="141.20001220703125" text="Modify/Remove" />
+          <TableColumn fx:id="nameCol" maxWidth="100.0" prefWidth="100.0" style="-fx-alignment: center;" text="NAME" />
+            <TableColumn fx:id="roomCol" maxWidth="85.0" prefWidth="85.0" style="-fx-alignment: center;" text="room" />
+            <TableColumn fx:id="checkinCol" maxWidth="100.0" prefWidth="100.0" style="-fx-alignment: center;" text="checkin" />
+            <TableColumn fx:id="checkoutCol" maxWidth="140.0" prefWidth="140.0" style="-fx-alignment: center;" text="checkout" />
         </columns>
-        <TextField fx:id="textField" layoutX="14.0" layoutY="14.0" prefHeight="46.0" prefWidth="241.0" />
-      <Button layoutX="260.0" layoutY="17.0" mnemonicParsing="false" onAction="#button" prefHeight="35.0" prefWidth="153.0" text="Insert and Show" />
       </TableView>
+      <Pane layoutY="59.0" prefHeight="3.0" prefWidth="200.0" style="-fx-background-color: black;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <Text layoutX="26.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Students Details" wrappingWidth="245.13671875">
+         <font>
+            <Font name="Bauhaus 93" size="32.0" />
+         </font>
+      </Text>
+      <HBox alignment="CENTER" layoutX="602.0" layoutY="-1.0" prefHeight="36.0" prefWidth="37.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <FontAwesomeIconView glyphName="CLOSE" onMouseClicked="#close" size="20" styleClass="btn" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="34.0" layoutY="73.0" prefHeight="76.0" prefWidth="200.0">
+         <children>
+            <FontAwesomeIconView fill="#2196f3" glyphName="USER_PLUS" onMouseClicked="#getAddView" size="45" styleClass="btn">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </FontAwesomeIconView>
+            <FontAwesomeIconView fill="#00e676" glyphName="REFRESH" layoutX="10.0" layoutY="65.0" onMouseClicked="#refreshTable" size="45" styleClass="btn">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </FontAwesomeIconView>
+            <FontAwesomeIconView fill="#455a64" glyphName="PRINT" layoutX="62.0" layoutY="65.0" onMouseClicked="#print" size="45" styleClass="btn" />
+         </children>
+      </HBox>
    </children>
-</Pane>
+</AnchorPane>
