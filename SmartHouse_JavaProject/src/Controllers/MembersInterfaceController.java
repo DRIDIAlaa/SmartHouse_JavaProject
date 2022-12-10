@@ -101,7 +101,7 @@ public class MembersInterfaceController implements Initializable {
     }
 
     @FXML
-    private void refreshTable() {
+    public void refreshTable() {
         try {
             MembersList.clear();
             
@@ -127,3 +127,4 @@ public class MembersInterfaceController implements Initializable {
         
         
     }}
+
