@@ -112,8 +112,8 @@ public class MembersInterfaceController implements Initializable {
             while (resultSet.next()){
                 MembersList.add(new  Member(
                         resultSet.getString("name"),
-                        resultSet.getString("room"),
-                        resultSet.getString("checkin"),
+                        resultSet.getString("Room"),
+                        resultSet.getString("Checkin"),
                         resultSet.getString("checkout")));
                 MembersTable.setItems(MembersList);
                 
