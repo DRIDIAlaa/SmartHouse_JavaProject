@@ -14,35 +14,7 @@ public class MembersAccess {
 	    Statement statement= connection.createStatement();
 	    statement.executeUpdate(sql) ;
 	}
-	/*public static void showMember() throws SQLException {
-		
-		try {
-		ConnectionClass connectionClass=new ConnectionClass();
-	    Connection connection=connectionClass.getConnection();
-	    
-	    String query = "SELECT * FROM user";
-	    Statement st = connection.createStatement();
-	    ResultSet rs = st.executeQuery(query);
-	    while (rs.next())
-	      {
-	        String name = rs.getString("name");
-	        String room = rs.getString("room");
-	        String checkin = rs.getString("checkin");
-	        String checkout = rs.getString("checkout");
-
-	        
-	        // print the results
-	        System.out.format("%s, %s, %s, %s",name,room,checkin,checkout);
-	      }
-	      st.close();
-	    }
-	    catch (Exception e)
-	    {
-	      System.err.println("Got an exception! ");
-	      System.err.println(e.getMessage());
-	    }
-	  }*/
-	}
+}
 	
 
 

@@ -7,30 +7,27 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.time.LocalDate;
-import java.util.Observable;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.HBox;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import javafx.util.Callback;
 import BOL.Member;
+import DAL.ConnectionClass;
 
 /**
  * FXML Controller class
@@ -42,13 +39,13 @@ public class MembersInterfaceController implements Initializable {
     @FXML
     private TableView<Member> MembersTable;
     @FXML
-    private TableColumn<Member, String> nameCol;
+    private TableColumn<Member, String> name;
     @FXML
-    private TableColumn<Member, String> roomCol;
+    private TableColumn<Member, String> room;
     @FXML
-    private TableColumn<Member, String> checkinCol;
+    private TableColumn<Member, String> checkin;
     @FXML
-    private TableColumn<Member, String> checkoutCol;
+    private TableColumn<Member, String> checkout;
     
     
     String query = null;
@@ -57,27 +54,20 @@ public class MembersInterfaceController implements Initializable {
     ResultSet resultSet = null ;
     Member member = null ;
     
-    ObservableList<Member>  MembersList = FXCollections.observableArrayList();
+    ObservableList<Member>  membersList = FXCollections.observableArrayList();
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-        loadDate();
+    	refreshTable();
+        name.setCellValueFactory(new PropertyValueFactory<Member, String>("name"));
+        room.setCellValueFactory(new PropertyValueFactory<Member, String>("room"));
+        checkin.setCellValueFactory(new PropertyValueFactory<Member, String>("checkin"));
+        checkout.setCellValueFactory(new PropertyValueFactory<Member, String>("checkout"));
+        MembersTable.setItems(membersList);
     }    
-    
-    
-    
-
-    private void loadDate() {
-		// TODO Auto-generated method stub
-		
-	}
-
-
-
 
 	@FXML
     private void close(MouseEvent event) {
@@ -85,46 +75,38 @@ public class MembersInterfaceController implements Initializable {
         stage.close();
     }
 
-    @FXML
-    private void getAddView(MouseEvent event) {
-        try {
-            Parent parent = FXMLLoader.load(getClass().getResource("/FXML/AddMemberDialog.fxml"));
-            Scene scene = new Scene(parent);
-            Stage stage = new Stage();
-            stage.setScene(scene);
-            stage.initStyle(StageStyle.UTILITY);
-            stage.show();
-        } catch (IOException ex) {
-            Logger.getLogger(MembersInterfaceController.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-    }
+    public void addMemberButtonAction(ActionEvent actionEvent) throws IOException, InterruptedException {
+		FXMLLoader fxmlLoader = new FXMLLoader();
+		fxmlLoader.setLocation(getClass().getResource("/FXML/AddMemberDialog.fxml"));
+		//Pane dialogPane = fxmlLoader.load();
+		Parent root = fxmlLoader.load();    
+		Scene scene = new Scene(root, 700, 250);
+	        Stage stage = new Stage();
+	        stage.initModality(Modality.APPLICATION_MODAL);
+	        stage.setScene(scene);
+	        stage.show();
+	}
 
-    @FXML
     public void refreshTable() {
-        try {
-            MembersList.clear();
+    	this.connection = ConnectionClass.getConnection();
+    	try {
+            membersList.clear();
             
             query = "SELECT * FROM `user`";
             preparedStatement = connection.prepareStatement(query);
             resultSet = preparedStatement.executeQuery();
             
             while (resultSet.next()){
-                MembersList.add(new  Member(
-                        resultSet.getString("name"),
-                        resultSet.getString("Room"),
-                        resultSet.getString("Checkin"),
-                        resultSet.getString("checkout")));
-                MembersTable.setItems(MembersList);
+                membersList.add(new  Member(
+                        resultSet.getString("name").toString(),
+                        resultSet.getString("Room").toString(),
+                        resultSet.getString("Checkin").toString(),
+                        resultSet.getString("checkout").toString()));
                 
             }
-            
-            
         } catch (SQLException ex) {
             Logger.getLogger(MembersInterfaceController.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-        
-        
-    }}
+        }    
+    }
+ }
 

@@ -1,38 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="578.0" prefWidth="917.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MembersInterfaceController">
+<AnchorPane prefHeight="620.0" prefWidth="716.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MembersInterfaceController">
 
    <children>   
-      <TableView fx:id="MembersTable" layoutX="34.0" layoutY="157.0" prefHeight="265.0" prefWidth="574.0">
+      <TableView fx:id="MembersTable" layoutX="38.0" layoutY="157.0" prefHeight="266.0" prefWidth="644.0">
         <columns>
-          <TableColumn fx:id="nameCol" maxWidth="100.0" prefWidth="100.0" style="-fx-alignment: center;" text="NAME" />
-            <TableColumn fx:id="roomCol" maxWidth="85.0" prefWidth="85.0" style="-fx-alignment: center;" text="room" />
-            <TableColumn fx:id="checkinCol" maxWidth="100.0" prefWidth="100.0" style="-fx-alignment: center;" text="checkin" />
-            <TableColumn fx:id="checkoutCol" maxWidth="140.0" prefWidth="140.0" style="-fx-alignment: center;" text="checkout" />
+          <TableColumn fx:id="name" maxWidth="211.20001983642578" prefWidth="209.59998321533203" style="-fx-alignment: center;" text="Name" />
+            <TableColumn fx:id="room" maxWidth="207.199951171875" prefWidth="140.79998779296875" style="-fx-alignment: center;" text="room" />
+            <TableColumn fx:id="checkin" maxWidth="217.60000610351562" prefWidth="163.19998168945312" style="-fx-alignment: center;" text="checkin" />
+            <TableColumn fx:id="checkout" maxWidth="288.0000061035156" prefWidth="130.39996337890625" style="-fx-alignment: center;" text="checkout" />
         </columns>
       </TableView>
-      <Pane layoutY="59.0" prefHeight="3.0" prefWidth="200.0" style="-fx-background-color: black;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-      <Text layoutX="26.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Students Details" wrappingWidth="245.13671875">
-         <font>
-            <Font name="Bauhaus 93" size="32.0" />
-         </font>
-      </Text>
+      
       <HBox alignment="CENTER" layoutX="602.0" layoutY="-1.0" prefHeight="36.0" prefWidth="37.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
      
       </HBox>
-      <HBox alignment="CENTER_LEFT" layoutX="34.0" layoutY="73.0" prefHeight="76.0" prefWidth="200.0">
+      <HBox alignment="CENTER_LEFT" layoutX="34.0" layoutY="73.0" prefHeight="76.0" prefWidth="200.0" />
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="716.0" style="-fx-background-color: #363348;">
          <children>
-            <Button mnemonicParsing="false" onAction="#refreshTable" prefHeight="25.0" prefWidth="230.0" text="Show all users" />
-         </children></HBox>
+            <Button layoutX="566.0" layoutY="8.0" mnemonicParsing="false" onAction="#addMemberButtonAction" prefHeight="25.0" prefWidth="128.0" text="Add Member" />
+            <Label layoutX="43.0" layoutY="3.0" text="Members" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
    </children>
    
 </AnchorPane>

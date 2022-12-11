@@ -44,7 +44,7 @@
                   <Button fx:id="DashBoardButton" layoutX="26.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#onClickedEvent" prefHeight="26.0" prefWidth="146.0" text="Dashboard" />
                 <Button fx:id="RoomsButton" layoutX="26.0" layoutY="58.0" mnemonicParsing="false" onMouseClicked="#onClickedEvent" prefHeight="26.0" prefWidth="146.0" text="Rooms" />
                   <Button fx:id="MembersButton" layoutX="26.0" layoutY="100.0" mnemonicParsing="false" onMouseClicked="#onClickedEvent" prefHeight="26.0" prefWidth="146.0" text="Members" />
-                  <Button fx:id="MembersButton1" layoutX="26.0" layoutY="144.0" mnemonicParsing="false" onMouseClicked="#onClickedEvent" prefHeight="26.0" prefWidth="146.0" text="Add To Database" />
+                  <!--<Button fx:id="MembersButton1" layoutX="26.0" layoutY="144.0" mnemonicParsing="false" onMouseClicked="#onClickedEvent" prefHeight="26.0" prefWidth="146.0" text="Add To Database" /> -->
                </children>
             </AnchorPane>
          </children>
